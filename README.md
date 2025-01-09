@@ -1,7 +1,11 @@
 
 ## How to develop a Driver plugin
 1. Fork this repo
-2. impl this `interface` in `plugin/plugin_impl.go`
+2. Install `go1.24rc1`
+```
+go install golang.org/dl/go1.24rc1@latest
+```
+3. impl this `interface` in `plugin/plugin_impl.go`
 ```
 type IPlugin interface {
 	// plugin id
@@ -24,9 +28,9 @@ type IPlugin interface {
 	Close()
 }
 ```
-3. Modify Your Driver Plugin info and plugin icon in file `plugin.toml`
-4. Build For Driver Plugin
+4. Modify Your Driver Plugin info and plugin icon in file `plugin.toml`
+5. Build For Driver Plugin
 ```
 make
 ```
-5. get you driver plugin `{name}.zip`
+6. get you driver plugin `{name}.zip`
