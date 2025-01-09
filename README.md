@@ -20,4 +20,4 @@ type IPlugin interface {
 ```
 make
 ```
-5.get you driver plugin `{name}.zip`
+5. get you driver plugin `{name}.zip`
