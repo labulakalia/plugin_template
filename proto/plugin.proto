@@ -1,0 +1,112 @@
+syntax = "proto3";
+
+package proto;
+option  go_package = "driver_plugin_temp/proto;proto";
+
+// plugin info from toml
+// zip
+// {plugin}.toml
+// ${id}.wasm
+// ${id}.png
+message DriverPluginConfig {
+    string          id            = 1;  // @gotags: toml:"id" gorm:"primaryKey"
+    string          name          = 2;  // @gotags: toml:"name" // driver plugin name,file must use ${name}.wasm
+    string          desc          = 3;  // @gotags: toml:"desc" // driver plugin desc
+    repeated string author        = 4;  // @gotags: toml:"author" gorm:"type:bytes;serializer:json"
+    string          version       = 5;  // @gotags: toml:"version"
+    string          released_time = 6;  // @gotags: toml:"released_time"
+    string          url           = 7;  // @gotags: toml:"url"
+    string          icon          = 8;  // @gotags: toml:"icon"
+    repeated string changelog     = 9;  // @gotags: toml:"released_changelog" gorm:"type:bytes;serializer:json"
+}
+
+// note this is
+enum AuthMethod {
+    UNSPECIFIED = 0;
+    FormEdit    = 1;  // input form
+    ScanQrcode  = 2;  // scan code
+    OAuth2      = 3;  // OAuth2
+}
+
+message AuthType {
+    message FormEdit {
+        string name  = 1;
+        string value = 2;
+        string label = 3;
+    }
+    message FormEditData {
+        repeated FormEdit form_edits = 1;
+    }
+
+    bool         enabled_form_auth = 1;
+    FormEditData form_edit_data    = 2;
+
+    bool   enabled_qrcode_auth = 3;
+    bytes  qrcode_image        = 4;  // qrcode image
+    uint64 qrcode_expire       = 5;  // qrcode expire time
+
+    //
+    bool   enabled_oauth2_auth  = 6;
+    string oauth2_url           = 7;  // oauth2 url
+    bytes  oauth2_callback_data = 8;  // qrcode callback auth data
+}
+
+message Status {
+    enum State {
+        UNSPECIFIED = 0;
+        Success     = 1;
+        Fail        = 2;
+        AuthFinish  = 3;
+        AuthExpired = 4;
+
+    }
+    State  state = 1;
+    string msg   = 2;
+}
+
+message FileEntry {
+    enum FileType {
+        FileTypeUNSPECIFIED = 0;
+        FileTypeDir         = 1;
+        FileTypeFile        = 2;
+    }
+    string   name          = 1;
+    FileType fileType      = 2;
+    uint64   size          = 3;
+    uint32   file_mode     = 4;
+    uint64   created_time  = 5;
+    uint64   modified_time = 6;
+    uint64   accessed_time = 7;
+}
+
+message DirEntry {
+    repeated FileEntry file_entries = 1;
+
+    Status status = 100;
+}
+
+message FileResource {
+    // video display VideoResolution
+    enum VideoResolution {
+        VideoResolutionUnspecified = 0;
+        VideoResolutionOriginal    = 1;  // Origin
+        VideoResolutionHD          = 2;  // 720P high defintion
+        VideoResolutionFHD         = 3;  // 1080P full high defintion
+        VideoResolutionQHD         = 4;  // 2K  quad high defintion
+        VideoResolutionUHD         = 5;  // 4K ultra high defintion
+    }
+    enum ResourceType {
+        MediaResourceTypeUNSPECIFIED = 0;
+        Video                        = 1;
+        Subtitle                     = 2;
+        Audio                        = 3;
+    }
+    string              url              = 1;
+    VideoResolution     video_resolution = 2;
+    uint64              expire_time      = 3;
+    ResourceType        resource_type    = 4;
+    string              title            = 5;
+    map<string, string> header           = 6;
+
+    Status status = 100;
+}
