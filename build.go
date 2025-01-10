@@ -5,7 +5,8 @@ import (
 	"compress/flate"
 	"fmt"
 	"io"
-	"plugin_temp/proto"
+
+	"github.com/labulakalia/plugin_temp/proto"
 
 	"log/slog"
 	"os"

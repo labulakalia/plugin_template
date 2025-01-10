@@ -1,8 +1,8 @@
 package main
 
 import (
-	"plugin_temp/plugin"
-	pluginproto "plugin_temp/proto"
+	"github.com/labulakalia/plugin_temp/plugin"
+	pluginproto "github.com/labulakalia/plugin_temp/proto"
 
 	"github.com/labulakalia/wazero_net/util"
 	"google.golang.org/protobuf/proto"

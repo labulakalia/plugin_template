@@ -1,6 +1,6 @@
 package plugin
 
-import "plugin_temp/proto"
+import "github.com/labulakalia/plugin_temp/proto"
 
 type PluginImpl struct {
 }

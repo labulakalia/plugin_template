@@ -1,4 +1,4 @@
-module plugin_temp
+module github.com/labulakalia/plugin_temp
 
 go 1.24rc1
 
