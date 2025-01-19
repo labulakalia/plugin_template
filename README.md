@@ -7,7 +7,7 @@
 ```
 type IPlugin interface {
 	// plugin id
-	Id() string
+	PluginId() string
 	// get auth type like form edit,qrcode,oauth2
 	GetAuthType() *proto.AuthType
 	// check auth data status
@@ -17,7 +17,7 @@ type IPlugin interface {
 	// use auth data init auth
 	InitAuth([]byte) *proto.Status
 	// plugin auth id,it need unqiue for same driver
-	AuthId() string
+	PluginAuthId() string
 	// get dir entry from driver plugin
 	GetDirEntry(dir_path string, page, page_size uint64) *proto.DirEntry
 	// get file entry resource from driver plugin

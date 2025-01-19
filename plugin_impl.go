@@ -15,7 +15,6 @@ type PluginImpl struct {
 
 // Id implements IPlugin.
 func (p *PluginImpl) PluginId() string {
-
 	panic("unimplemented")
 }
 
