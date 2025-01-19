@@ -4,6 +4,15 @@ import (
 	"github.com/labulakalia/plugin_api"
 )
 
+/*
+NOTE: net and http use package
+"github.com/labulakalia/wazero_net/wasi/http"
+"github.com/labulakalia/wazero_net/wasi/net"
+*/
+
+type PluginImpl struct {
+}
+
 // Id implements IPlugin.
 func (p *PluginImpl) PluginId() string {
 
