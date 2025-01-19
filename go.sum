@@ -1,0 +1,8 @@
+github.com/BurntSushi/toml v1.4.0 h1:kuoIxZQy2WRRk1pttg9asf+WVv6tWQuBNVmK8+nqPr0=
+github.com/BurntSushi/toml v1.4.0/go.mod h1:ukJfTF/6rtPPRCnwkur4qwRxa8vTRFBF0uk2lLoLwho=
+github.com/labulakalia/plugin_api v0.0.0-20250119031254-28dc7b48da97 h1:6XxqeR77C6DCnELEnqn0PvssRKCeV63mNmblxZZdsak=
+github.com/labulakalia/plugin_api v0.0.0-20250119031254-28dc7b48da97/go.mod h1:GSltjiDr3Mauqi8EpMVLNpZQusdKlxC6QBcl9I600+k=
+github.com/labulakalia/plugin_api v0.0.1 h1:/hFbTI8Iq896PBZVtO2YGMf3mAFgR5BteX9byMhvjWk=
+github.com/labulakalia/plugin_api v0.0.1/go.mod h1:GSltjiDr3Mauqi8EpMVLNpZQusdKlxC6QBcl9I600+k=
+github.com/labulakalia/wazero_net v0.0.5 h1:oVK6aVSklnzg3FayQv+hNedo7CTsljPEAYkNkv5d0q4=
+github.com/labulakalia/wazero_net v0.0.5/go.mod h1:XtAEu/S85mXNv9Q7EcO5Oa+pSyikv1+4+qNIty6EqN4=
