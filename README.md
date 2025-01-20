@@ -2,28 +2,27 @@
 ## How to develop a Driver plugin
 1. Fork this repo
 2. Install `go1.24rc1`
-
 3. impl this `interface` in `plugin_impl.go`
 ```
 type IPlugin interface {
 	// plugin id
-	PluginId() string
+	PluginId() (string, error)
 	// get auth type like form edit,qrcode,oauth2
-	GetAuthType() *proto.AuthType
+	GetAuthType() (*plugin.AuthType, error)
 	// check auth data status
-	CheckAuth(*proto.AuthType) *proto.Status
+	CheckAuth(*plugin.AuthType) (*plugin.Status, error)
 	// get auth data when check auth status is success
-	GetAuthData() []byte
+	GetAuthData() ([]byte, error)
 	// use auth data init auth
-	InitAuth([]byte) *proto.Status
+	CheckAuthData([]byte) (*plugin.Status, error)
 	// plugin auth id,it need unqiue for same driver
-	PluginAuthId() string
+	PluginAuthId() (string, error)
 	// get dir entry from driver plugin
-	GetDirEntry(dir_path string, page, page_size uint64) *proto.DirEntry
+	GetDirEntry(dir_path string, page, page_size uint64) (*plugin.DirEntry, error)
 	// get file entry resource from driver plugin
-	GetFileResource(file_path string) *proto.FileResource
+	GetFileResource(file_path string) (*plugin.FileResource, error)
 	// close driver plugin
-	Close()
+	Close() error
 }
 ```
 4. Modify Your Driver Plugin info and plugin icon in file `plugin.toml`
