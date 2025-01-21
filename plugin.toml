@@ -5,4 +5,4 @@ icon = "test.png"
 author = ["author1(author1@email.com)", "author2(author2@email.com)"]
 version = "v0.0.1"
 released_time = "2024.10.12"
-changelog = ["1.优化testdriver 链接", "2.修改bug"]
+changelog = ["优化testdriver 链接", "修改bug"]

@@ -6,6 +6,10 @@ github.com/labulakalia/plugin_api v0.0.4 h1:LLjgyaw0GEXirSJSW7+Sotcclfqq4UU6ElGL
 github.com/labulakalia/plugin_api v0.0.4/go.mod h1:oG2BHtSAUAOnzUagpL9mSuUTtzdJX203LHsf/Gz6P3o=
 github.com/labulakalia/plugin_api v0.0.5 h1:Nna2W+0Q6dp2ZYzBS8eELlCiVbnY54LD9M3me5V3TNo=
 github.com/labulakalia/plugin_api v0.0.5/go.mod h1:oG2BHtSAUAOnzUagpL9mSuUTtzdJX203LHsf/Gz6P3o=
+github.com/labulakalia/plugin_api v0.0.6 h1:b8ktPagZtpEW+BpDcHsUJnDj5C23eToRQRPXCv9RuA4=
+github.com/labulakalia/plugin_api v0.0.6/go.mod h1:oG2BHtSAUAOnzUagpL9mSuUTtzdJX203LHsf/Gz6P3o=
+github.com/labulakalia/plugin_api v0.0.7 h1:D4o0Sat3jRmusZKh5QkPFKmrAJ00qD3w7rxaS3YsQvI=
+github.com/labulakalia/plugin_api v0.0.7/go.mod h1:oG2BHtSAUAOnzUagpL9mSuUTtzdJX203LHsf/Gz6P3o=
 github.com/labulakalia/wazero_net v0.0.5 h1:oVK6aVSklnzg3FayQv+hNedo7CTsljPEAYkNkv5d0q4=
 github.com/labulakalia/wazero_net v0.0.5/go.mod h1:XtAEu/S85mXNv9Q7EcO5Oa+pSyikv1+4+qNIty6EqN4=
 google.golang.org/protobuf v1.36.3 h1:82DV7MYdb8anAVi3qge1wSnMDrnKK7ebr+I0hHRN1BU=
