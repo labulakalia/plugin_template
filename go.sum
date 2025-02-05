@@ -2,8 +2,8 @@ github.com/BurntSushi/toml v1.4.0 h1:kuoIxZQy2WRRk1pttg9asf+WVv6tWQuBNVmK8+nqPr0
 github.com/BurntSushi/toml v1.4.0/go.mod h1:ukJfTF/6rtPPRCnwkur4qwRxa8vTRFBF0uk2lLoLwho=
 github.com/google/go-cmp v0.5.5 h1:Khx7svrCpmxxtHBq5j2mp/xVjsi8hQMfNLvJFAlrGgU=
 github.com/google/go-cmp v0.5.5/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
-github.com/labulakalia/plugin_api v0.0.9 h1:Ue0NMyEogBZKLuDnbMdXCyi9VMZ3BZmymWC8kCg5Ol0=
-github.com/labulakalia/plugin_api v0.0.9/go.mod h1:oG2BHtSAUAOnzUagpL9mSuUTtzdJX203LHsf/Gz6P3o=
+github.com/labulakalia/plugin_api v0.0.11 h1:DmZrEKP4NrnoYV3VVfssxUKn3PYPB7rrAXfUTxEyOLI=
+github.com/labulakalia/plugin_api v0.0.11/go.mod h1:S8god4+6kjYuZOWZBJlS8rXd9jtJC/KxKo92bS5GKXU=
 github.com/labulakalia/wazero_net v0.0.5 h1:oVK6aVSklnzg3FayQv+hNedo7CTsljPEAYkNkv5d0q4=
 github.com/labulakalia/wazero_net v0.0.5/go.mod h1:XtAEu/S85mXNv9Q7EcO5Oa+pSyikv1+4+qNIty6EqN4=
 golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543 h1:E7g+9GITq07hpfrRu66IVDexMakfv52eLZ2CXBWiKr4=
