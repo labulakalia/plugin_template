@@ -1,3 +1,4 @@
+// DO NOT EDIT.
 //go:build wasip1
 
 package main
@@ -6,6 +7,9 @@ import (
 	"github.com/labulakalia/plugin_api"
 )
 
-func main() {
+func init() {
 	plugin_api.RegistryPlugin(&PluginImpl{})
+}
+
+func main() {
 }
