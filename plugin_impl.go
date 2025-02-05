@@ -15,6 +15,10 @@ NOTE: net and http use package
 type PluginImpl struct {
 }
 
+func NewPluginImpl() *PluginImpl {
+	return &PluginImpl{}
+}
+
 // Id implements IPlugin.
 func (p *PluginImpl) PluginId() (string, error) {
 	panic("unimplemented")

@@ -8,8 +8,7 @@ import (
 )
 
 func init() {
-	plugin_api.RegistryPlugin(&PluginImpl{})
+	plugin_api.RegistryPlugin(NewPluginImpl())
 }
 
-func main() {
-}
+func main() {}
