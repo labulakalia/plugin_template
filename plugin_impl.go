@@ -24,7 +24,7 @@ func (p *PluginImpl) GetAuthType() (*plugin.AuthType, error) {
 }
 
 // CheckAuth implements IPlugin.
-func (p *PluginImpl) CheckAuth(*plugin.AuthType) (*plugin.Status, error) {
+func (p *PluginImpl) CheckAuth(*plugin.AuthType) error {
 	panic("unimplemented")
 }
 
@@ -34,7 +34,7 @@ func (p *PluginImpl) GetAuthData() ([]byte, error) {
 }
 
 // InitAuth implements IPlugin.
-func (p *PluginImpl) CheckAuthData([]byte) (*plugin.Status, error) {
+func (p *PluginImpl) CheckAuthData([]byte) error {
 	panic("unimplemented")
 }
 
