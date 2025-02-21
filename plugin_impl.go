@@ -30,12 +30,7 @@ func (p *PluginImpl) GetAuthType() (*plugin.AuthType, error) {
 }
 
 // CheckAuth implements IPlugin.
-func (p *PluginImpl) CheckAuth(*plugin.AuthType) error {
-	panic("unimplemented")
-}
-
-// GetAuthData implements IPlugin.
-func (p *PluginImpl) GetAuthData() ([]byte, error) {
+func (p *PluginImpl) CheckAuthType(*plugin.AuthType) (authData []byte, err error) {
 	panic("unimplemented")
 }
 
@@ -56,10 +51,5 @@ func (p *PluginImpl) GetDirEntry(dir_path string, page uint64, page_size uint64)
 
 // GetFileResource implements IPlugin.
 func (p *PluginImpl) GetFileResource(file_path string) (*plugin.FileResource, error) {
-	panic("unimplemented")
-}
-
-// Close implements IPlugin.
-func (p *PluginImpl) Close() error {
 	panic("unimplemented")
 }
