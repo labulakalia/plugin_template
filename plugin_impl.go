@@ -4,6 +4,7 @@ package main
 
 import (
 	"github.com/labulakalia/plugin_api/plugin"
+	"google.golang.org/protobuf/types/known/anypb"
 )
 
 /*
@@ -24,13 +25,13 @@ func (p *PluginImpl) PluginId() (string, error) {
 	panic("unimplemented")
 }
 
-// GetAuthType implements IPlugin.
-func (p *PluginImpl) GetAuthType() (*plugin.AuthType, error) {
+// GetAuthe implements IPlugin.
+func (p *PluginImpl) GetAuth() (*plugin.Auth, error) {
 	panic("unimplemented")
 }
 
 // CheckAuth implements IPlugin.
-func (p *PluginImpl) CheckAuthType(*plugin.AuthType) (authData []byte, err error) {
+func (p *PluginImpl) CheckAuth(authMethod *anypb.Any) (authData []byte, err error) {
 	panic("unimplemented")
 }
 
