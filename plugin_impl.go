@@ -26,12 +26,13 @@ func (p *PluginImpl) PluginId() (string, error) {
 }
 
 // GetAuthe implements IPlugin.
+// Note: not store var in GetAuth
 func (p *PluginImpl) GetAuth() (*plugin.Auth, error) {
 	panic("unimplemented")
 }
 
 // CheckAuth implements IPlugin.
-func (p *PluginImpl) CheckAuth(authMethod *anypb.Any) (authData []byte, err error) {
+func (p *PluginImpl) CheckAuthMethod(authMethod *anypb.Any) (authData []byte, err error) {
 	panic("unimplemented")
 }
 
